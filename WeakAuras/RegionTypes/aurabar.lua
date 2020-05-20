@@ -644,7 +644,13 @@ end
 -- Update time (status-bar and text)
 local function UpdateTime(region, data, inverse)
   -- Timing variables
-  local remaining  = region.expirationTime - GetTime();
+  local remaining
+  if region.expirationTime == nil then
+	remaining = 0
+  else
+	remaining  = region.expirationTime - GetTime();
+  end
+  
   local duration  = region.duration;
   local progress  = duration ~= 0 and remaining / duration or 1;
   

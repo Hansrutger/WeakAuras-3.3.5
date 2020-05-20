@@ -408,8 +408,8 @@ function ActionButton_HideOverlayGlow(self)
 end
  
 function ActionButton_OverlayGlowAnimOutFinished(overlay)
-  local actionButton = overlay:GetParent()
-  overlay:Hide()
-  tinsert(unusedOverlayGlows, overlay)
-  actionButton.overlay = nil
+	-- local actionButton = overlay:GetParent()
+	-- overlay:Hide()
+	tinsert(unusedOverlayGlows, overlay)
+	-- actionButton.overlay = nil
 end
